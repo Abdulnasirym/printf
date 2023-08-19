@@ -9,26 +9,28 @@ int printf_bin(va_list val)
 {
 	int flag = 0;
 	int cont = 0;
-	int i, a = 1, b;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int p;
 
-	for (i = 0; i < 32; i++)
+	unsigned int num = va_arg(val, unsigned int);
+
+	for (int i = 31; i >= 0; i--)
 	{
-		p = ((a << (31 - i)) & num);
-		if (p >> (31 - i))
-			flag = 1;
+		int bit = (num >> i) & 1;
+
+		if (bit == 1)
+		flag = 1;
+
 		if (flag)
 		{
-			b = p >> (31 - i);
-			_putchar(b + 48);
+			putchar(bit + '0');
 			cont++;
 		}
 	}
+
 	if (cont == 0)
 	{
+		putchar('0');
 		cont++;
-		_putchar('0');
 	}
-	return (cont);
+
+	return cont;
 }

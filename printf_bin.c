@@ -13,7 +13,7 @@ int printf_bin(va_list val)
 
 	unsigned int num = va_arg(val, unsigned int);
 
-	for (i = 63; i >= 0; i--)
+	for (i = 32; i >= 0; i--)
 	{
 		bit = (num >> i) & 1;
 

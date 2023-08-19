@@ -33,5 +33,5 @@ int printf_bin(va_list val)
 		cont++;
 	}
 
-	return cont;
+	return (cont);
 }

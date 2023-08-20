@@ -22,7 +22,7 @@ int _printf(const char * const format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-
+Place:
 	while (format[i] != '\0')
 	{
 		j = 0;
@@ -32,7 +32,7 @@ int _printf(const char * const format, ...)
 			{
 				len += m[j].f(args);
 				i = i + 2;
-				
+				goto Place;
 			}
 			j++;
 		}

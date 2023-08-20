@@ -25,8 +25,8 @@ int _printf(const char * const format, ...)
 Place:
 	while (format[i] != '\0')
 	{
-		j = 0;
-		while (j <= 13)
+		j = 13;
+		while (j >= 0)
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
@@ -34,7 +34,7 @@ Place:
 				i = i + 2;
 				goto Place;
 			}
-			j++;
+			j--;
 		}
 		_putchar(format[i]);
 		len++;

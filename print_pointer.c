@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * printf_pointer - prints an hexgecimal number.
+ * print_pointer - prints an hexgecimal number.
  * @val: arguments.
  * Return: counter.
  */
-int printf_pointer(va_list val)
+int print_pointer(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
-	long int a;
-	int b;
+	long int x;
+	int y;
 	int i;
 
 	p = va_arg(val, void*);
@@ -23,9 +23,9 @@ int printf_pointer(va_list val)
 		return (i);
 	}
 
-	a = (unsigned long int)p;
+	x = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = printf_hex_aux(a);
-	return (b + 2);
+	y = print_hex_extra(x);
+	return (y + 2);
 }

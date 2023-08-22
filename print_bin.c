@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printf_bin - prints a binary number.
- * @val: arguments.
- * Return: 1.
+ * print_bin - prints binary number.
+ * @val: parameter.
+ * Return: integer
  */
-int printf_bin(va_list val)
+int print_bin(va_list val)
 {
 	int flag = 0;
 	int cont = 0;

@@ -10,7 +10,8 @@ int _printf(const char * const format, ...)
 		{"%s", print_s}, {"%c", print_c},
 		{"%%", print_37},
 		{"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
-		{"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned},
+		{"%R", print_rot13}, {"%b", print_bin},
+		{"%u", print_unsigned},
 		{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
 		{"%S", print_exc_string}, {"%p", print_pointer}
 	};
@@ -28,7 +29,7 @@ Here:
 		j = 13;
 		while (j >= 0)
 		{
-			if (p[j].placeholder[0] == format[i] && p[j].placeholder[1] == format[i + 1])
+			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
 			{
 				length += p[j].function(args);
 				i = i + 2;

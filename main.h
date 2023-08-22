@@ -17,7 +17,7 @@
 
 typedef struct format
 {
-	char *placeholder;
+	char *ph;
 	int (*function)();
 } convert;
 

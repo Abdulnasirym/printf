@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_int - prints integer
+ * print_i - prints integer
  * @args: argument to print
  * Return: integer
  */
@@ -44,7 +44,7 @@ int print_i(va_list args)
 }
 
 /**
- * print_dec - prints decimal
+ * print_d - prints decimal
  * @args: argument to print
  * Return: integer
  */

@@ -10,7 +10,7 @@
 
 /**
  * struct format - converter for printf
- * @placeholder: type char pointer of the specifier
+ * @ph: type char pointer of the specifier
  * @function: function for the conversion specifier
  *
  */
